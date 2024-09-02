@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Share</th>
+                <th scope="col">Value</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td scope="row">{{row.type}}</td>
+                    <td>{{row.symbol}}</td>
+                    <td>{{row.share}}</td>
+                    <td>{{ '%0.2f' % row.value}}</td>
+                    <td>{{row.data}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
