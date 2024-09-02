@@ -14,4 +14,3 @@ C$50 Finance provides a platform for users to:
 - css
 - api IEX
 - flask
-- sqlite3
